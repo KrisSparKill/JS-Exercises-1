@@ -10,7 +10,6 @@ body {
 }
 
 header {
-    margin: 1em;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr;
@@ -20,6 +19,7 @@ header {
 
 #logo {
   max-width: 150px;
+  margin-left:2em;
 }
 
 header > h1 {
