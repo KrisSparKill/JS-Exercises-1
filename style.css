@@ -19,7 +19,7 @@ header {
 
 #logo {
   max-width: 150px;
-  margin-left:2em;
+  margin-left:1em;
 }
 
 header > h1 {
@@ -75,6 +75,10 @@ section h2 {
 .troubleshooting img {
     width: 600px;
     height: auto;
+}
+
+.troubleshooting li {
+  margin:0.25em;
 }
 
 .troubleshooting p:nth-last-child(1) {
