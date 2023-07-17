@@ -278,8 +278,10 @@ addToDone("Exercise 14 is correct.")
 // Exercise 15
 // Write a function definition named isEven that takes in a number and returns true or false if that number is even.
 function isEven(i){
-  if (i% 2 === 0)
-  
+  if (i% 2 === 0){
+    return true;
+  }
+  return false;
 }
 assert(isEven(2), true, "Exercise 15");
 assert(isEven(positiveOddNumber), false, "Exercise 15");
@@ -291,7 +293,11 @@ addToDone("Exercise 15 is correct.")
 
 // Exercise 16
 // Write a function definition named identity that takes in any input and returns that input. Don't overthink this one!
-
+function identity(input){
+  if (input = input){
+    return input;
+  }
+}
 assert(identity(fruits), fruits, "Exercise 16");
 assert(identity(vegetables), vegetables, "Exercise 16");
 assert(identity(positiveOddNumber), positiveOddNumber, "Exercise 16");
@@ -303,7 +309,12 @@ addToDone("Exercise 16 is correct.")
 
 // Exercise 17
 // Write a function definition named isPositiveOdd that takes in a number and returns true or false if the value is both greater than zero and odd
-
+function isPositiveOdd(i){
+  if (i % 2 !== 0 && i > 0){
+    return true;
+  }
+  return false;
+}
 
 
 assert(isPositiveOdd(3), true, "Exercise 17");
@@ -316,7 +327,12 @@ addToDone("Exercise 17 is correct.")
 
 // Exercise 18
 // Write a function definition named isPositiveEven that takes in a number and returns true or false if the value is both greater than zero and even
-
+function isPositiveEven(i){
+  if (i % 2 === 0 && i > 0){
+    return true;
+  }
+  return false;
+}
 assert(isPositiveEven(4), true, "Exercise 18" );
 assert(isPositiveEven(positiveOddNumber), false, "Exercise 18");
 assert(isPositiveEven(positiveEvenNumber), true, "Exercise 18");
@@ -327,7 +343,12 @@ addToDone("Exercise 18 is correct.")
 
 // Exercise 19
 // Write a function definition named isNegativeOdd that takes in a number and returns true or false if the value is both less than zero and odd.
-
+function isNegativeOdd(i){
+            if (i % 2 !== 0 && i < 0){
+                return true;
+            }
+            return false;
+        }
 assert(isNegativeOdd(-3), true, "Exercise 19" );
 assert(isNegativeOdd(positiveOddNumber), false, "Exercise 19");
 assert(isNegativeOdd(positiveEvenNumber), false, "Exercise 19");
@@ -338,7 +359,12 @@ addToDone("Exercise 19 is correct.")
 
 // Exercise 20
 // Write a function definition named isNegativeEven that takes in a number and returns true or false if the value is both less than zero and even.
-
+function isNegativeEven(i){
+  if (i % 2 === 0 && i<0){
+    return true;
+  }
+  return false;
+}
 assert(isNegativeEven(-4), true, "Exercise 20" );
 assert(isNegativeEven(positiveOddNumber), false, "Exercise 20");
 assert(isNegativeEven(positiveEvenNumber), false, "Exercise 20");
@@ -350,7 +376,9 @@ addToDone("Exercise 20 is correct.")
 
 // Exercise 21
 // Write a function definition named half that takes in a number and returns half the provided number.
-
+function half(i){
+  return i/2;
+}
 assert(half(4), 2, "Exercise 21");
 assert(half(5), 2.5, "Exercise 21");
 assert(half(positiveOddNumber), positiveOddNumber / 2, "Exercise 21");
@@ -363,7 +391,9 @@ addToDone("Exercise 21 is correct.")
 
 // Exercise 22
 // Write a function definition named double that takes in a number and returns double the provided number.
-
+function double (i){
+  return i*2;
+}
 assert(double(4), 8, "Exercise 22");
 assert(double(5), 10, "Exercise 22");
 assert(double(positiveOddNumber), positiveOddNumber * 2, "Exercise 22");
