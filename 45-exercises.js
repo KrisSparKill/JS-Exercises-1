@@ -119,9 +119,7 @@ addToDone("Exercise 9 is correct.")
 // Write the code necessary to produce a single array that holds all fruits then all vegetables in the order as they were sorted above.
 // Assign the result to a variable named fruitsAndVeggies. 
 // *hint* the search engine search here would be "how to combine two arrays in JavaScript", for example.
-const arr1 = ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana']
-const arr2 = ['broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini']
-const fruitsAndVeggies = arr1.concat(arr2);
+  var fruitsAndVeggies = fruits.concat(vegetables);
 assert(fruitsAndVeggies, ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana', 'broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'], "Exercise 10")
 addToDone("Exercise 10 is correct")
 
@@ -203,7 +201,9 @@ assert(plusTwo(0), 2, "zero plus 2 is two")
 
 // Exercise 11
 // Write a function definition for a function named addOne that takes in a number and returns that number plus one
-function plusOne(x) 
+function addOne(x) {
+  return x + 1;
+}
 
 
 assert(addOne(2), 3, "Exercise 11");
@@ -224,7 +224,12 @@ addToDone("Exercise 11 is correct.")
 // Documentation for comparison operators https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators
   // HINT: Use this example code to see these operators in action usage https://gist.github.com/ryanorsinger/e843c7d0966993bd8193f0afabe16ae0
 // If you get stuck, be sure to check the example code and documentation listed above
-
+function isPositive(i){
+            if (i > 0){
+                return true;
+            }
+            return false;
+        }
 
 assert(isPositive(0.25), true, "Exercise 12");
 assert(isPositive(0.00001), true, "Exercise 12");
@@ -241,7 +246,12 @@ addToDone("Exercise 12 is correct.")
 
 // Exercise 13
 // Write a function definition named isNegative that takes in a number and returns true or False if that number is negative.
-
+function isNegative(i){
+  if (i<0){
+    return true;
+  }
+  return false;
+}
 
 
 assert(isNegative(positiveOddNumber), false, "Exercise 13");
@@ -253,7 +263,12 @@ addToDone("Exercise 13 is correct.")
 
 // Exercise 14
 // Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
-
+function isOdd(i){
+  if (i%2!== 0){
+    return true;
+  }
+  return false;
+}
 assert(isOdd(positiveOddNumber), true, "Exercise 14");
 assert(isOdd(positiveEvenNumber), false, "Exercise 14");
 assert(isOdd(negativeOddNumber), true, "Exercise 14");
@@ -262,7 +277,10 @@ addToDone("Exercise 14 is correct.")
 
 // Exercise 15
 // Write a function definition named isEven that takes in a number and returns true or false if that number is even.
-
+function isEven(i){
+  if (i% 2 === 0)
+  
+}
 assert(isEven(2), true, "Exercise 15");
 assert(isEven(positiveOddNumber), false, "Exercise 15");
 assert(isEven(positiveEvenNumber), true, "Exercise 15");
