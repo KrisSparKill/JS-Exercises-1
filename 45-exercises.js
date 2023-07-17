@@ -600,7 +600,7 @@ addToDone("Exercise 35 is correct.")
 // Exercise 36
 // Write a function definition named quotient that takes in two numbers and returns the quotient of dividing the first argument by the second argument.
 function quotient(a, b){
-  
+  return parseInt(a/b);
 }
 assert(quotient(27, 9), 3, "Exercise 36");
 assert(quotient(5, 2), 2, "Exercise 36");
@@ -610,7 +610,9 @@ addToDone("Exercise 36 is correct.")
 
 // Exercise 37
 // Write a function definition named remainder that takes in two numbers and returns the remainder of first argument divided by the second argument.
-
+function remainder(a, b){
+  return a%b;
+}
 assert(remainder(3, 3), 0, "Exercise 37");
 assert(remainder(5, 2), 1, "Exercise 37");
 assert(remainder(7, 5), 2, "Exercise 37");
@@ -620,7 +622,9 @@ addToDone("Exercise 37 is correct.")
 
 // Exercise 38
 // Write a function definition named sumOfSquares that takes in two numbers, squares each number, then returns the sum of both squares.
-
+function sumOfSquares(a, b){
+  return ((a*a) + (b*b));
+}
 assert(sumOfSquares(3, 2), 13, "Exercise 38");
 assert(sumOfSquares(5, 2), 29, "Exercise 38");
 assert(sumOfSquares(2, 4), 20, "Exercise 38");
@@ -630,7 +634,9 @@ addToDone("Exercise 38 is correct.")
 
 // Exercise 39
 // Write a function definition named timesTwoPlusThree that takes in a number, multiplies it by two, adds 3 and returns the result.
-
+function timesTwoPlusThree (i){
+  return ((i*2)+3);
+}
 assert(timesTwoPlusThree(0), 3, "Exercise 39");
 assert(timesTwoPlusThree(1), 5, "Exercise 39");
 assert(timesTwoPlusThree(2), 7, "Exercise 39");
@@ -641,7 +647,9 @@ addToDone("Exercise 39 is correct.")
 
 // Exercise 40
 // Write a function definition named areaOfRectangle that takes in two numbers and returns the product.
-
+function areaOfRectangle(a, b){
+  return a * b;
+}
 assert(areaOfRectangle(1, 3), 3, "Exercise 40");
 assert(areaOfRectangle(5, 2), 10, "Exercise 40");
 assert(areaOfRectangle(2, 7), 14, "Exercise 40");
@@ -652,7 +660,9 @@ addToDone("Exercise 40 is correct.")
 
 // Exercise 41
 // Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
-
+function areaOfCircle(r){
+  return Math.PI * Math.pow(r, 2);
+}
 
 assert(areaOfCircle(3), 28.274333882308138, "Exercise 41");
 assert(areaOfCircle(5), 78.53981633974483, "Exercise 41");
@@ -662,7 +672,9 @@ addToDone("Exercise 41 is correct.")
 
 // Exercise 42
 // Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
-
+function circumference(r){
+            return 2 * (Math.PI * r);
+}
 assert(circumference(3), 18.84955592153876, "Exercise 42");
 assert(circumference(5), 31.41592653589793, "Exercise 42");
 assert(circumference(7), 43.982297150257104, "Exercise 42");
@@ -685,7 +697,12 @@ function isOneOrTwoOrThree(x) {
 // Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
 // Review this code carefully https://gist.github.com/ryanorsinger/5627b954d119dabb3d8c44d56b38c354 if you want more guidance on Exercises 43, 44, and 45.
-
+function isVowel(char){
+  if (char == "a" || char == "e" || char == "i" || char == "o" || char == "u" || char == "A" || char == "E" || char == "I" || char == "O" ||char == "U"){
+    return true;
+  }
+  return false;
+}
 assert(isVowel("a"), true, "Exercise 43");
 assert(isVowel("U"), true, "Exercise 43");
 assert(isVowel("banana"), false, "Exercise 43");
@@ -696,7 +713,16 @@ addToDone("Exercise 43 is correct.")
 
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
-
+function hasVowels(str) {
+  var vowels = 'aeiou';
+  var vcount = 0;
+  for (var x = 0; x < str.length; x++) {
+  if (vowels.toLowerCase().indexOf(str[x]) !== -1) {
+        vcount++;
+    }
+}
+  return vcount > 0;
+        }
 assert(hasVowels("banana"), true, "Exercise 44");
 assert(hasVowels("ubuntu"), true, "Exercise 44");
 assert(hasVowels("QQQQ"), false, "Exercise 44");
@@ -706,6 +732,17 @@ addToDone("Exercise 44 is correct.")
 
 // Exercise 45
 // Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
+function countVowels(str1){
+  var vowel_list = 'aeiou';
+  var vcount = 0;
+  for(var x = 0; x < str1.length ; x++){
+      if (vowel_list.indexOf(str1[x]) !== -1)
+      {
+          vcount += 1;
+      }
+  }
+  return vcount;
+}
 
 assert(countVowels("banana"), 3, "Exercise 45");
 assert(countVowels("ubuntu"), 3, "Exercise 45");
